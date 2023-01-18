@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <a href="{{ url_for('register') }}">Register</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    {% if session['username'] %}
+        <p>You are logged in as {{ session['username'] }}!</p>
+    {% else %}
+        <p>You are not logged in!</p>
+    {% endif %}
+</body>
